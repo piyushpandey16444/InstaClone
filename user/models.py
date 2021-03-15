@@ -9,6 +9,8 @@ class User(AbstractUser):
         upload_to='dpImages', null=True, blank=True)
     full_name = models.CharField(max_length=250)
     email = models.EmailField(max_length=254, unique=True)
+    first_name = None
+    last_name = None
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name',]

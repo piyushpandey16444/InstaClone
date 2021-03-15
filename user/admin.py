@@ -4,6 +4,6 @@ from user.models import User
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['username', 'is_superuser', 'is_active', 'first_name']
-    list_display_links = ['username',
-                          'is_superuser', 'is_active', 'first_name']
+    list_display = ['full_name', 'username', 'is_superuser', 'is_active']
+    list_display_links = ['full_name', 'username',
+                          'is_superuser', 'is_active']
