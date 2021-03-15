@@ -4,9 +4,8 @@ from django.contrib.auth.base_user import BaseUserManager
 
 
 class User(AbstractUser):
-    display_picture = models.ImageField(upload_to='dpImages')
+    display_picture = models.ImageField(
+        upload_to='dpImages', null=True, blank=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
-
-    objects = BaseException()
